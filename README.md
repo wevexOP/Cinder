@@ -5,7 +5,7 @@ We love coding.
 
 # Authors 
 
-Dominic Paulazzo (wevexOP)
+Dominic Paulazzo (wevexOP) Troy Miller (R0x0s)
 
 # 15 Project 2: Interactive Full-Stack Application
 
