@@ -1,1 +1,1 @@
-const server 
+// This is going to be our server page. Backend ONLY!
