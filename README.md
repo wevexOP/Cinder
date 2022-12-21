@@ -6,7 +6,7 @@ We love coding.
 # Authors 
 
 
-Dominic Paulazzo (wevexOP) Troy Miller (R0x0s) Kaitlyn Heinle (kait-kat) Michael (studiomav)
+Dominic Paulazzo (wevexOP) Troy Miller (R0x0s) Kaitlyn Heinle (kait-kat) Michael (studiomav) Paul York (pyork3)
 
 
 # 15 Project 2: Interactive Full-Stack Application
