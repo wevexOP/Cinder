@@ -14,7 +14,17 @@ Then open the link!
 # Authors 
 
 
-Dominic Paulazzo (wevexOP) Troy Miller (R0x0s) Kaitlyn Heinle (kait-kat) Michael (studiomav) Paul York (pyork3) ArvinJames Inanoria (jxmesin)
+Dominic Paulazzo (wevexOP) 
+
+Troy Miller (R0x0s) 
+
+Kaitlyn Heinle (kait-kat) 
+
+Michael (studiomav) 
+
+Paul York (pyork3) 
+
+ArvinJames Inanoria (jxmesin)
 
 
 # 15 Project 2: Interactive Full-Stack Application
