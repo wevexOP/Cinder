@@ -2,6 +2,14 @@
 
 We love coding.
 
+# Steps to Running the Server.
+After pulling the main branch, please complete these steps to activate the server.
+
+1. Npm init
+
+2. Npm i express
+
+3. Npm i express-handlebars
 
 # Authors 
 
