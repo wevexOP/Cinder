@@ -1,6 +1,12 @@
 {
   "dependencies": {
+<<<<<<< HEAD
     "bulma": "^0.9.4",
     "express": "^4.18.2"
+=======
+    "express": "^4.18.2",
+    "express-handlebars": "^6.0.6",
+    "nodemon": "^2.0.20"
+>>>>>>> 189f295081065864176b648982d66efd49eae365
   }
 }
