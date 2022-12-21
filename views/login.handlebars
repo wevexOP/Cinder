@@ -1,0 +1,33 @@
+<form id="login-form">
+    <div>
+        Username <input type="text" id="username" placeholder="Username Here" />
+    </div>
+     <div>
+        Password <input type="text" id="password" placeholder="Password Here" />
+    </div>
+    <button>
+        Login!
+    </button>
+</form>
+
+<script>
+    document.getElementById("login-form").addEventListener("submit", (event) => {
+        event.preventDefault();
+
+        const username = getElementById("username").value;
+        const password = getElementById("password").value;
+
+    
+
+        fetch('/api/user/login', {
+            method: 'POST',
+            headers: {
+                'Content-type': 'application.json',
+            },
+            body: JSON.stringify({
+                username,
+                password,
+            }),
+        });
+    });
+</script>
