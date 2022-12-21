@@ -5,11 +5,11 @@ We love coding.
 # Steps to Running the Server.
 After pulling the main branch, please complete these steps to activate the server.
 
-1. Npm init
+Type: 'npm i' in the command line.
 
-2. Npm i express
+Next type: 'node server.js' 
 
-3. Npm i express-handlebars
+Then open the link!
 
 # Authors 
 
