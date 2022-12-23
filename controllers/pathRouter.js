@@ -1,13 +1,12 @@
-const { Router } =  require('express');
+const router = require('express').Router();
 
-const pathRouter = new Router();
 
-pathRouter.get('/', (req, res) => {
+router.get('/', (req, res) => {
     res.render('home');
 });
 
-pathRouter.get('/login', (req, res) => {
+router.get('/login', (req, res) => {
     res.render('login');
 });
 
-module.exports = pathRouter;
+module.exports = router;

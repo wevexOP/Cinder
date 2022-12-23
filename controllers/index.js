@@ -1,12 +1,13 @@
 // adding api routing here
-const { Router } =  require('express');
+const router = require('express').Router();
 
 const pathRouter = require('./pathRouter');
 const apiRouter = require('./apis');
 
-const allRouter = new Router();
+router.use('/', pathRouter);
+router.use('/api', apiRouter);
 
-allRouter.use('/', pathRouter);
-allRouter.use('/api', apiRouter);
+module.exports = router;
 
-module.exports = allRouter;
+
+

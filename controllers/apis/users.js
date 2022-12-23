@@ -1,9 +1,7 @@
-const { Router } =  require('express');
+const router = require('express').Router();
 
-const usersRouter = new Router();
-
-usersRouter.post('/login', async (req, res) => {
+router.post('/login', async (req, res) => {
     console.log(req.body);
 });
 
-module.exports = usersRouter();
+module.exports = router;
