@@ -1,28 +1,39 @@
-// This is going to be our server page. Backend ONLY!
 const express = require('express');
 const app = express();
 
-//login posts and bcrypt, hashing the passwords
+//authentication begins!  
 require('dotenv').config()
 
 const jwt = require('jsonwebtoken')
 
-app.use(express.json());
+app.use(express.json())
 
-app.get('/posts', authenticateToken, (req, res) => {
-    res.json(posts.filter(post => post.username === req.user.name))
+//requires db to store tokens //
+
+app.post('/token', (req, res) => {
+    const refreshToken = req.body.token
+    if (refreshToken == null) return res.sendStatus(401)
+    if (!refreshTokens.includes(refreshToken)) return res.sendStatus(403)
+    jwt.verify(refreshToken, process.env.REFRESH_TOKEN_SECRET, (err, user) => {
+        if (err) return res.sendStatus(403)
+        const accessToken = generateAccessToken({ name: user.name })
+        res.json({ accessToken: accessToken })
+    })
 })
 
-function authenticateToken(req, res, next) {
-    const authHeader = req.headers['authorization']
-    const token = authHeader && authHeader.split(' ')[1]
-    if (token == null) return res.sendStatus(401)
+//app.delete('/logout', (req, res) => {})// placemarker for db token deletion
 
-    jwt.verify(token, process.env.ACCESS_TOKEN_SECRET, (err, user) => {
-        if (err) return res.sendStatus(403)
-        req.user = user 
-        next()
-    })
+app.post('/login', (req, res) => {
+    const username = req.body.username
+    const user = { name: username }
+
+    const accessToken = generateAccessToken(user)
+    const refreshToken = jwt.sign(user, process.env.REFRESH_TOKEN_SECRET)
+    res.json({ accessToken: accessToken, refreshToken: refreshToken })
+})
+
+function generateAccessToken(user) {
+    return jwt.sign(user, process.env.ACCESS_TOKEN_SECRET, { expiresIn: '30m'})
 }
 
 app.post('/users', async (req, res) => {
@@ -55,21 +66,4 @@ app.post('users/login', async (req, res) => {
     }
 })
 
-// to be continued? ...
-
-const { engine } = require('express-handlebars');
-
-const mainRouter = require('./controllers');
-
-const PORT = process.env.PORT || 3001;
-
-app.engine('handlebars', engine());
-app.set('view engine', 'handlebars');
-
-app.use(express.json());
-
-app.use(mainRouter);
-
-app.listen(PORT, () => {
-    console.log("Listening on http://localhost:" + PORT);
-});
+app.listen(4001)
