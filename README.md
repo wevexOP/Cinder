@@ -16,7 +16,7 @@ Then open the link!
 # Authors 
 
 
-Dominic Paulazzo (wevexOP) 
+Dominic Paulazzo (wevexOP) 'Himothee'
 
 Troy Miller (R0x0s) the guy
 
