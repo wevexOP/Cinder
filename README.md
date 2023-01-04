@@ -7,6 +7,8 @@ After pulling the main branch, please complete these steps to activate the serve
 
 Type: 'npm i' in the command line.
 
+Typ: 'npm install express-handlebars'
+
 Next type: 'node server.js' 
 
 Then open the link!
