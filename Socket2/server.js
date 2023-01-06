@@ -13,13 +13,18 @@ app.use(express.static(path.join(__dirname, 'public')));
 io.on('connection', socket => {
     console.log('New WS Connection...');
     socket.emit('message', 'Welcome to Cindir Chat!');
+
     //Shows when a user connects
     socket.broadcast.emit('message', 'A user has joined the chat');
+
 //Runs when a user discconects
 socket.on('disconnect', () => {
     io.emit('message', 'A user has left the chat');
 });
-
+//Listen for msg
+socket.on("chatMessage", (msg) => {
+    io.emit('message', msg)
+});
 });
 const PORT = 4001 || process.env.PORT;
 
