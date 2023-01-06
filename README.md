@@ -1,7 +1,6 @@
-# devLove.io
+# Cinder <3
 
-We love coding.
-
+We love coding and people who code. <3
 # Steps to Running the Server.
 After pulling the main branch, please complete these steps to activate the server.
 
