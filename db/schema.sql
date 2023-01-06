@@ -4,12 +4,12 @@ USE devlove;
 
 CREATE TABLE `users` (
 	`id` INT NOT NULL AUTO_INCREMENT,
-	`email` VARCHAR(255) NOT NULL UNIQUE DEFAULT '0',
-	`password_hash` varchar(255) NOT NULL UNIQUE DEFAULT '0',
+	`email` VARCHAR(255) NOT NULL UNIQUE,
+	`password_hash` varchar(255) NOT NULL,
 	`display_name` VARCHAR(255) NOT NULL UNIQUE,
 	`gender` INT NOT NULL DEFAULT '0',
 	`dating_status` INT NOT NULL DEFAULT '0',
-	`zip_code` INT NOT NULL DEFAULT '0',
+	`zip_code` INT NOT NULL DEFAULT '00000',
 	`bio` TEXT,
 	`langs` varchar(255) NOT NULL DEFAULT '00000000000',
 	`linkedin` TEXT(255),
@@ -21,7 +21,7 @@ CREATE TABLE `swipes` (
 	`id` INT NOT NULL AUTO_INCREMENT,
 	`user1` INT,
 	`user2` INT,
-	`value` BINARY NOT NULL,
+	`value` INT NOT NULL,
 	PRIMARY KEY (`id`)
 );
 
