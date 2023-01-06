@@ -5,13 +5,15 @@ USE devlove;
 CREATE TABLE `users` (
     `id` INT NOT NULL AUTO_INCREMENT,
     `email` VARCHAR(255) NOT NULL UNIQUE DEFAULT '0',
-    `password` varchar(255) NOT NULL UNIQUE DEFAULT '0',
+    `password_hash` varchar(255) NOT NULL UNIQUE DEFAULT '0',
     `display_name` VARCHAR(255) NOT NULL AUTO_INCREMENT UNIQUE,
     `gender` INT NOT NULL DEFAULT '0',
     `dating_status` INT NOT NULL DEFAULT '0',
     `zip_code` INT NOT NULL DEFAULT '0',
     `bio` TEXT DEFAULT '0',
     `langs` varchar(255) NOT NULL DEFAULT '00000000000',
+    `linkedin` TEXT(255),
+	  `github` VARCHAR(255),
     PRIMARY KEY (`id`)
 );
 
