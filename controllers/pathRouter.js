@@ -17,6 +17,18 @@ router.get('/profile', (req, res) => {
     res.render('profile');
 });
 
+router.get('/profile/:id', (req, res) => {
+    var id = req.params.id;
+
+    if (id == '1'){
+        res.render('profile', {
+           
+        });
+    } else {
+        res.render('home');
+    }
+});
+
 router.get('/about', (req, res) => {
     res.render('about');
 });
