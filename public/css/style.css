@@ -1,0 +1,17 @@
+/*full page background video!*/
+#bgvid {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -100;
+}
+
+/*rounded corners on videos!*/
+.cardvid {
+    border-radius: 8px;
+    overflow: hidden;
+    -webkit-transform: translateZ(0);
+    box-shadow: 0 19px 51px 0 rgba(0, 0, 0, 0.16), 0 14px 19px 0 rgba(0, 0, 0, 0.07);
+}
