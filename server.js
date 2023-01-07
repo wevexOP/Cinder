@@ -13,7 +13,8 @@ app.engine('handlebars', engine());
 app.set('view engine', 'handlebars');
 
 app.use(express.json());
-
+app.use(express.static("public"));
+app.use('/public', express.static(__dirname + '/public'));
 app.use(mainRouter);
 
 app.listen(PORT, () => {

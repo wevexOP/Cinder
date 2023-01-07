@@ -13,6 +13,10 @@ router.get('/signup', (req, res) => {
     res.render('signup');
 });
 
+router.get('/profile', (req, res) => {
+    res.render('profile');
+});
+
 router.get('/profile/:id', (req, res) => {
     var id = req.params.id;
 
@@ -21,7 +25,7 @@ router.get('/profile/:id', (req, res) => {
            
         });
     } else {
-
+        res.render('home');
     }
 });
 
