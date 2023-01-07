@@ -13,7 +13,7 @@ router.get('/signup', (req, res) => {
     res.render('signup');
 });
 
-router.get('/:id', (req, res) => {
+router.get('/profile/:id', (req, res) => {
     var id = req.params.id;
 
     if (id == '1'){
