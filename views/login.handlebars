@@ -1,37 +1,24 @@
-{{> header}}
-<form id="login-form">
-    <div>
-        Username <input type="text" id="username" placeholder="Username Here" />
+{{> header}} 
+<main class="form-signin text-center w-25 m-auto">
+  <form>
+    <img class="mb-4 mt-5" src="images/cinderdark.png" height="57">
+    <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
+
+    <div class="form-floating">
+      <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+      <label for="floatingInput">Email address</label>
     </div>
-     <div>
-        Password <input type="text" id="password" placeholder="Password Here" />
+    <div class="form-floating">
+      <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+      <label for="floatingPassword">Password</label>
     </div>
-    <button>
-        Login!
-    </button>
-</form>
 
-<script src="./js/login.js"></script>
-
-
-<script>
-    document.getElementById("login-form").addEventListener("submit", (event) => {
-        event.preventDefault();
-
-        const username = getElementById("username").value;
-        const password = getElementById("password").value;
-
-    
-
-        fetch('/api/user/login', {
-            method: 'POST',
-            headers: {
-                'Content-type': 'application.json',
-            },
-            body: JSON.stringify({
-                username,
-                password,
-            }),
-        });
-    });
-</script>
+    <div class="checkbox mb-3 mt-3">
+      <label>
+        <input type="checkbox" value="remember-me"> Remember me
+      </label>
+    </div>
+    <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
+    <p class="mt-5 mb-3 text-muted">©2023 Cinder</p>
+  </form>
+</main>
