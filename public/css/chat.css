@@ -1,43 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 
-:root {
-	--dark-color-a: #971212;
-	--dark-color-b: #bd4622;
-	--light-color: #e6e9ff;
-	--success-color: #5cb85c;
-	--error-color: #d9534f;
-}
-
-* {
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
-}
-
-body {
-	font-family: 'Roboto', sans-serif;
-	font-size: 16px;
-	background: var(--light-color);
-	margin: 20px;
-}
-
-ul {
-	list-style: none;
-}
-
-a {
-	text-decoration: none;
-}
-
-.btn {
-	cursor: pointer;
-	padding: 5px 15px;
-	background: var(--light-color);
-	color: var(--dark-color-a);
-	border: 0;
-	font-size: 17px;
-}
-
 /* Chat Page */
 
 .chat-container {
@@ -130,7 +92,6 @@ a {
 .join-container {
 	max-width: 500px;
 	margin: 80px auto;
-	color: #fff;
 }
 
 .join-header {
