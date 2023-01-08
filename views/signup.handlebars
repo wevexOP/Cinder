@@ -1,55 +1,24 @@
 {{> header}}
-<form id="login-form">
-    <div>
-     <section class="mb-5">
-        <h4 class="mb-5 text-center"><strong>Sign Up for Cinder</strong></h4>
-        <div class="row d-flex justify-content-center">
-          <div class="col-md-6">
-            <form>
-             
-              <div class="row mb-4">
-                <div class="col">
-                  <div class="form-outline">
-                    <input type="text" id="form3Example1" class="form-control" />
-                    <label class="form-label" for="form3Example1">First name</label>
-                  </div>
-                </div>
-                <div class="col">
-                  <div class="form-outline">
-                    <input type="text" id="form3Example2" class="form-control" />
-                    <label class="form-label" for="form3Example2">Last name</label>
-                  </div>
-                </div>
-              </div>
+<main class="form-signin text-center w-25 m-auto">
+  <form>
+    <img class="mb-4 mt-5" src="images/cinderdark.png" height="57">
+    <h1 class="h3 mb-3 fw-normal">Signup for Cinder</h1>
 
-              <div class="form-outline mb-4">
-                <input type="email" id="form3Example3" class="form-control" />
-                <label class="form-label" for="form3Example3">Email address</label>
-              </div>
-
-              <div class="form-outline mb-4">
-                <input type="password" id="form3Example4" class="form-control" />
-                <label class="form-label" for="form3Example4">Password</label>
-              </div>
-
-              <div class="d-grid gap-2 col-6 mx-auto">
-                <button type="submit" class="btn btn-primary btn-block mb-4">
-                  Sign up
-                </button>
-              </div>
-            </form>
-          </div>
-        </div>
-
-</form>
-
-   <footer class="bg-light text-lg-start">
-    <hr class="m-0" />
-      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-        © 2023 Copyright:
-        <a class="text-dark">Cinder</a>
-      </div>
-  </footer>
-
+    <div class="form-floating">
+      <input type="text" class="form-control" id="floatingInput" placeholder="Conan Barbarian">
+      <label for="floatingInput">Your name</label>
+    </div>
+    <div class="form-floating">
+      <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+      <label for="floatingInput">Email address</label>
+    </div>
+    <div class="form-floating">
+      <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+      <label for="floatingPassword">Password</label>
+    </div>
+    <button class="w-100 btn btn-lg mt-4 btn-primary" type="submit">Signup</button>
+  </form>
+</main>
+{{> footer}}
 
 
