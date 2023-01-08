@@ -29,6 +29,18 @@ router.get('/profile/:id', (req, res) => {
     }
 });
 
+router.get('/chat/:id', (req, res) => {
+    var id = req.params.id;
+
+    if (id == 'landing'){
+        res.render('chat', {
+           
+        });
+    } else {
+        res.render('home');
+    }
+});
+
 router.get('/about', (req, res) => {
     res.render('about');
 });
