@@ -9,7 +9,6 @@ CREATE TABLE `users` (
 	`display_name` VARCHAR(255) NOT NULL UNIQUE,
 	`gender` INT NOT NULL DEFAULT '0',
 	`dating_status` INT NOT NULL DEFAULT '0',
-	`zip_code` INT NOT NULL DEFAULT '00000',
 	`bio` TEXT,
 	`langs` varchar(255) NOT NULL DEFAULT '00000000000',
 	`linkedin` TEXT(255),
