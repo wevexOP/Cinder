@@ -29,14 +29,29 @@ router.get('/profile/:id', (req, res) => {
     }
 });
 
-router.get('/chat/:id', (req, res) => {
+router.get('/chat', (req, res) =>
+{
+    res.render('chat');
+});
+
+router.get('/chat/:id', (req, res) =>
+{
     var id = req.params.id;
 
-    if (id == 'landing'){
-        res.render('chat', {
-           
-        });
-    } else {
+    console.log(id);
+
+    if (id == 'landing')
+    {
+        res.render('chat');
+    }
+
+    else if (id == 'main')
+    {
+        res.render('chatmain');
+    }
+    
+    else
+    {
         res.render('home');
     }
 });
