@@ -41,6 +41,19 @@ router.get('/chat/:id', (req, res) => {
     }
 });
 
+router.get('/chat/:id', (req, res) => {
+    var id = req.params.id;
+
+    if (id == 'main'){
+        res.render('chat', {
+           
+        });
+    } else {
+        res.render('home');
+    }
+});
+
+
 router.get('/about', (req, res) => {
     res.render('about');
 });
