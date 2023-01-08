@@ -1,21 +1,21 @@
 {{> header}}
 <main class="form-signin text-center w-25 m-auto">
-  <form>
+  <form method="POST" action="/signup">
     <img class="mb-4 mt-5" src="images/cinderdark.png" height="57">
     <h1 class="h3 mb-3 fw-normal">Signup for Cinder</h1>
 
     <div class="form-floating">
-      <input type="text" class="form-control" id="floatingInput" placeholder="Conan Barbarian">
+      <input type="text" class="form-control" name="userName" placeholder="Conan Barbarian">
       <label for="floatingInput">Your name</label>
     </div>
 
     <div class="form-floating">
-      <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+      <input type="email" class="form-control" name="userEmail" placeholder="name@example.com">
       <label for="floatingInput">Email address</label>
     </div>
     
     <div class="form-floating">
-      <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+      <input type="password" class="form-control" name="userPassword" placeholder="Password">
       <label for="floatingPassword">Password</label>
     </div>
     <button class="w-100 btn btn-lg mt-4 btn-primary" type="submit">Signup</button>

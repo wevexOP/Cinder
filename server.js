@@ -9,6 +9,10 @@ const jwt = require('jsonwebtoken')
 
 app.use(express.json());
 
+app.use(express.urlencoded({
+    extended: true
+  }))
+
 app.get('/posts', authenticateToken, (req, res) => {
     res.json(posts.filter(post => post.username === req.user.name))
 })

@@ -13,6 +13,12 @@ router.get('/signup', (req, res) => {
     res.render('signup');
 });
 
+router.post('/signup', (req, res) => 
+{
+    console.log(req.body);
+    res.end();
+});
+
 router.get('/profile', (req, res) => {
     res.render('profile');
 });
