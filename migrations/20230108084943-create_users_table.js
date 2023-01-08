@@ -1,7 +1,7 @@
-'use strict';
+/*'use strict';
 
 /** @type {import('sequelize-cli').Migration} */
-module.exports = {
+/*module.exports = {
   async up (queryInterface, Sequelize) {
   
      await queryInterface.createTable('users', { 
@@ -68,5 +68,4 @@ password_hash:{
      * Example:
      * await queryInterface.dropTable('users');
      */
-  }
-};
+  
