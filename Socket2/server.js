@@ -14,13 +14,13 @@ const io = socketio(server);
 // Set static folder
 app.use(express.static(path.join(__dirname, 'public')));
 
-let con = mysql.createConnection({
+/* let con = mysql.createConnection({
     host: "localhost",
     user: "",
     password: "",
     database: "devlove"
   });
-  
+  */
 
 const adminName = 'Cinder Bot';
 
