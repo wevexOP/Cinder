@@ -3,6 +3,7 @@ const { user } = require('../models');
 const { profile } = require('../models');
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
+const templates = {}
 
 
 router.get('/', (req, res) => {
@@ -84,7 +85,7 @@ router.get('/chat', (req, res) =>
     res.render('chat');
 });
 
-router.get('/chat/:id', (req, res) =>
+router.get('/index', (req, res) =>
 {
     var id = req.params.id;
 
