@@ -2,9 +2,6 @@ node_modules
 bulma
 .ds_store
 .env
-<<<<<<< HEAD
 \lib
-=======
 chatmain.handlebars
 chat.handlebars
->>>>>>> 340fbd398df4b589bdd2fc42de74ee3fc5a3e409
