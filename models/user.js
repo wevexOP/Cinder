@@ -14,7 +14,6 @@ User.init(
         display_name:{
             type:DataTypes.STRING,
             allowNull:false,
-            unique:true,
         },
         password_hash:{
             type:DataTypes.STRING,
