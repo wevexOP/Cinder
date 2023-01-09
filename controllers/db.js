@@ -1,5 +1,5 @@
-const Sequalize = require('sequalize');
-const db = new Sequalize('devlove', 'root', '', {
+const Sequelize = require('sequelize');
+const db = new Sequelize('devlove', 'root', '', {
     host: "localhost",
     dialect: "mysql",
 
