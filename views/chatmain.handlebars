@@ -1,3 +1,15 @@
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="/bootstrap/css/bootstrap.css" />
+<link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css" />
+<link rel="stylesheet" href="/bootstrap/js/bootstrap.min.js" />
+<link rel="stylesheet" href="/Socket2/public/css/style.css">
+
+</head>
+
+
+
 <body>
   {{> header }}
   <div class="chat-container">
@@ -37,7 +49,7 @@
   integrity="sha512-/l6vieC+YxaZywUhmqs++8uF9DeMvJE61ua5g+UK0TuHZ4TkTgB1Gm1n0NiA86uEOM9JJ6JUwyR0hboKO0fCng==" 
   crossorigin="anonymous" 
   referrerpolicy="no-referrer"></script>
-  <script src="/socket.io/socket.io.js"></script>
-  <script src="js/main.js"></script>
+  <script src="/node_modules/socket.io/client-dist/socket.io.js"></script>
+  <script src="/Socket2/public/js/main.js"></script>
 </body>
 {{> footer }}

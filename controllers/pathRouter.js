@@ -1,4 +1,7 @@
 const router = require('express').Router();
+const { user } = require('../models');
+const jwt = require('jsonwebtoken');
+const bcrypt = require('bcrypt');
 
 
 router.get('/', (req, res) => {
@@ -13,14 +16,42 @@ router.get('/signup', (req, res) => {
     res.render('signup');
 });
 
-router.post('/signup', (req, res) => 
-{
+router.post('/signup', async (req, res) => {
     console.log(req.body);
-    res.end();
+    const { userName, userEmail, userPassword } = req.body;
+    let userObject = await user.findOne({
+        where:{
+            email: userEmail
+        }
+    });
+    if(userObject){
+        res.status(409).end("This email is already in use!");
+    }
+
+    const encryptedPassword = await bcrypt.hash(userPassword, 10);
+    
+    userObject = await user.create({
+        display_name: userName,
+        email: userEmail,
+        password_hash: encryptedPassword,
+        })
+    const token = jwt.sign({
+        id:userObject.id,
+    }, process.env.JWT_KEY
+    )
+    res.cookie(
+        'sessionToken',
+        token)
+    res.redirect('/'); 
 });
 
+
+
 router.get('/profile', (req, res) => {
-    res.render('profile');
+    res.render('profile'),{
+        session: req.sessionToken,
+    }
+
 });
 
 router.get('/profile/:id', (req, res) => {

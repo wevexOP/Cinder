@@ -2,7 +2,7 @@ DROP DATABASE IF EXISTS devlove;
 CREATE DATABASE devlove;
 USE devlove;
 
-CREATE TABLE `users` (
+/* CREATE TABLE `users` (
 	`id` INT NOT NULL AUTO_INCREMENT,
 	`email` VARCHAR(255) NOT NULL UNIQUE,
 	`password_hash` varchar(255) NOT NULL,
@@ -40,5 +40,5 @@ ALTER TABLE `matches` ADD CONSTRAINT `matches_fk0` FOREIGN KEY (`user1`) REFEREN
 
 ALTER TABLE `matches` ADD CONSTRAINT `matches_fk1` FOREIGN KEY (`user2`) REFERENCES `users`(`id`);
 
-
+*/
 
