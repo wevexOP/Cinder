@@ -61,7 +61,7 @@ socket.on('disconnect', () => {
     io.emit('message', formatMessage(adminName, `USER has left the chat`));
 });
 });
-const PORT = 4001 || process.env.PORT;
+const PORT = process.env.PORT || 4001;
 
 server.listen(PORT, () => console.log(`Server running on ${PORT}`));
 
