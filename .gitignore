@@ -2,3 +2,5 @@ node_modules
 bulma
 .ds_store
 .env
+chatmain.handlebars
+chat.handlebars
