@@ -6,6 +6,7 @@ const app = express();
 require('dotenv').config()
 
 const jwt = require('jsonwebtoken')
+const bcrypt = require('bcrypt')
 
 app.use(express.json());
 
@@ -25,7 +26,7 @@ function authenticateToken(req, res, next) {
     })
 }
 
-app.post('/users', async (req, res) => {
+app.post('/api./users', async (req, res) => {
     try {
         const salt= await bcrypt.genSalt()
         const hashedPassword = await bcrypt.hash(req.body.password, salt)
@@ -55,11 +56,13 @@ app.post('users/login', async (req, res) => {
     }
 })
 
+
 // to be continued? ...
 
 const { engine } = require('express-handlebars');
 
 const mainRouter = require('./controllers');
+const sequelize = require('sequelize');
 
 const PORT = process.env.PORT || 3001;
 
