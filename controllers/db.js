@@ -5,7 +5,7 @@ const db = new Sequelize('devlove', 'root', '', {
 
 });
 
-const environment = process.env.NODE_ENV;
+const environment = process.env.NODE_ENV || "development";
 
 db.sync({});
 
