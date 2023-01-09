@@ -5,9 +5,10 @@ const path =require('path');
 const socketio = require('socket.io');
 const formatMessage = require('./utils/messages');
 const { userJoin, getCurrentUser} = require('./utils/user');
+const hbs = require('express-handlebars');
+
 
 const app = express();
-app.use("/bootstrap",express.static(__dirname + "/node_modules/bootstrap/dist"))
 const server = http.createServer(app);
 const io = socketio(server);
 // Set static folder
