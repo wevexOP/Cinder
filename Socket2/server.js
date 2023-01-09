@@ -5,7 +5,7 @@ const path =require('path');
 const socketio = require('socket.io');
 const formatMessage = require('./utils/messages');
 const { userJoin, getCurrentUser} = require('./utils/user');
-const hbs = require('express-handlebars');
+
 
 
 const app = express();
@@ -26,13 +26,13 @@ const adminName = 'Cinder Bot';
 
 // Run when a client connects
 io.on('connection', socket => {
-    con.connect(function(err) {
-        if (err) throw err;
-        con.query("SELECT * FROM users", function (err, result, fields) {
-          if (err) throw err;
-          console.log(result);
-        });
-      });
+    //con.connect(function(err) {
+      //  if (err) throw err;
+        //con.query("SELECT * FROM users", function (err, result, fields) {
+          //if (err) throw err;
+          //console.log(result);
+        //});
+      //});
     socket.on('joinRoom', ({ username, room })=>{
         const user = userJoin(socket.id, username, room);
 
@@ -60,7 +60,7 @@ socket.on('disconnect', () => {
     io.emit('message', formatMessage(adminName, `USER has left the chat`));
 });
 });
-const PORT = 3001 || process.env.PORT;
+const PORT = 4001 || process.env.PORT;
 
 server.listen(PORT, () => console.log(`Server running on ${PORT}`));
 

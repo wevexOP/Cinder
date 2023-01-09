@@ -1,11 +1,11 @@
 {{> header}}
 
-<div class="container col-xxl-8 px-4 py-5 ">
+<div class="container col-xxl-8 px-4 py-5">
     <div class="main-body">
 
         <div class="row gutters-sm">
-            <div class="col-md-4 mb-3">
-                <div class="card">
+            <div class="col-md-6 mb-5">
+                <div class="card" style="width: 950px">
                     <div class="card-body">
                         <div class="d-flex flex-column align-items-center text-center">
                         <img src="/images/IMG_1891.PNG" alt="Admin" class="rounded-circle" width="150">
@@ -13,7 +13,9 @@
                             <h4>James Inanoria</h4>
                             <p class="text-secondary mb-1">Full Stack Developer</p>
                             <p class="text-muted font-size-sm">Bay Area, San Francisco, CA</p>
-                            <button class="btn btn-outline-secondary">Message</button>
+                            <div class="d-grid gap-2">
+                             <button class="btn btn-outline-secondary">Chat</button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -28,7 +30,7 @@
                         <h6 class="mb-0">Full Name</h6>
                     </div>
                     <div class="col-sm-9 text-secondary">
-                        <input type="website" class="form-control" id="floatingInput">
+                        <input type="website" name="fullNameProfile" class="form-control" id="floatingInput">
                     </div>
                    </div>
                     <hr>
@@ -37,7 +39,7 @@
                             <h6 class="mb-0">Email</h6>
                         </div>                       
                         <div class="col-sm-9 text-secondary">
-                            <input type="website" class="form-control" id="floatingInput">
+                            <input type="website" name="userEmailProfile" class="form-control" id="floatingInput">
                         </div>
                     </div>
                     
@@ -45,6 +47,16 @@
                     <div class="row">
                         <div class="col-sm-3">
                             <h6 class="mb-0">Phone</h6>
+                        </div>                       
+                        <div class="col-sm-9 text-secondary">
+                            <input type="website" name="userPhoneProfile" class="form-control" id="floatingInput">
+                        </div>
+                    </div>
+
+                    <hr>
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <h6 class="mb-0">Occupation</h6>
                         </div>                       
                         <div class="col-sm-9 text-secondary">
                             <input type="website" class="form-control" id="floatingInput">
@@ -57,12 +69,12 @@
                             <h6 class="mb-0">Location</h6>
                         </div>                       
                         <div class="col-sm-9 text-secondary">
-                            <input type="website" class="form-control" id="floatingInput">
+                            <input type="website" name="userLocationProfile" class="form-control" id="floatingInput">
                         </div>
                     </div>
                     <hr>
                     <div class="d-grid gap-2">
-                        <button class="btn btn-outline-secondary">Save</button>
+                        <button class="btn btn-outline-secondary" type="submit">Save</button>
                     </div>
 
                     
@@ -73,7 +85,7 @@
 
 
 
-        <div class="card col-md-4 ">
+        <div class="card col-md-4" style="height: 324px">
             <ul class=" list-group list-group-flush">
                 <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
                 <input type="website" class="form-control" id="floatingInput" placeholder="URL">
