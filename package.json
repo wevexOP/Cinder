@@ -12,6 +12,7 @@
     "nodemon": "^2.0.20",
     "sequelize": "^6.28.0",
     "server": "^1.0.38",
-    "socket.io": "^4.5.4"
+    "socket.io": "^4.5.4",
+    "socketio": "^1.0.0"
   }
 }
