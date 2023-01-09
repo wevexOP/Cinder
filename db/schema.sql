@@ -2,9 +2,9 @@ DROP DATABASE IF EXISTS devlove;
 CREATE DATABASE devlove;
 USE devlove;
 
-DROP DATABASE IF EXISTS cinder;
+/* DROP DATABASE IF EXISTS cinder;
 CREATE DATABASE cinder;
-USE cinder;
+USE cinder;*/
 
 /* CREATE TABLE `users` (
 	`id` INT NOT NULL AUTO_INCREMENT,
