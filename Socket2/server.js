@@ -5,7 +5,7 @@ const path =require('path');
 const socketio = require('socket.io');
 const formatMessage = require('./utils/messages');
 const { userJoin, getCurrentUser} = require('./utils/user');
-
+const mainRouter = require('./controllers');
 
 
 const app = express();
@@ -13,6 +13,7 @@ const server = http.createServer(app);
 const io = socketio(server);
 // Set static folder
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(mainRouter);
 
 /* let con = mysql.createConnection({
     host: "localhost",
