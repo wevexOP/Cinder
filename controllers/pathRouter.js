@@ -54,6 +54,26 @@ router.get('/profile', (req, res) => {
 
 });
 
+router.post('/profile', async (req, res) => {
+    console.log(req.body);
+    const { fullNameProfile, userEmailProfile, userPhoneProfile, userLocationProfile } = req.body;
+    let userObject = await user.findOne({
+        where:{
+            email: userEmail
+        }
+    });
+    if(userObject){
+        res.status(409).end("This email is already in use!");
+    }
+    userObject = await user.create({
+        fullNameProfile: fullNameProfile,
+        userEmailProfile: userEmailProfile,
+        userPhoneProfile: userPhoneProfile,
+        userLocationProfile: userLocationProfile,
+        })
+    
+});
+
 router.get('/profile/:id', (req, res) => {
     var id = req.params.id;
 
