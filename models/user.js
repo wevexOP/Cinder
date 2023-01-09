@@ -1,7 +1,37 @@
-const Sequalize = require('sequelize');
-const db = require('../db');
+const { Model, DataTypes } = require('sequelize');
+const sequelize = require("../config/sequelize");
 
-module.exports = define('users', {
+class User extends Model {}
+
+User.init(
+    {
+        
+        email:{
+            type:DataTypes.STRING,
+            allowNull:false,
+            unique:true,
+        },
+        display_name:{
+            type:DataTypes.STRING,
+            allowNull:false,
+            unique:true,
+        },
+        password_hash:{
+            type:DataTypes.STRING,
+            allowNull:false,
+        },
+    },
+    {
+        sequelize,
+    },
+
+);
+
+module.exports = User;
+
+
+
+/* module.exports = db.define('users', {
     id:{
         type:sequelize.INTEGER(30),
         allowNull:false,
@@ -34,10 +64,6 @@ module.exports = define('users', {
         allowNull:false,
         unique:true,
     },
-	zip_code:{ 
-        type:sequalize.STRING,
-        allowNull:false,
-        unique:true,},
 	bio:{
         type:sequalize.STRING,
         allowNull:false,
@@ -58,4 +84,4 @@ module.exports = define('users', {
         allowNull:false,
         unique:true,
     }
-})
+}) */
