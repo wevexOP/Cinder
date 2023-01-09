@@ -2,4 +2,3 @@ node_modules
 bulma
 .ds_store
 .env
-lib\
