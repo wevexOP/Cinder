@@ -62,7 +62,6 @@ app.post('users/login', async (req, res) => {
 const { engine } = require('express-handlebars');
 
 const mainRouter = require('./controllers');
-const sequelize = require('sequelize');
 
 const PORT = process.env.PORT || 3001;
 
