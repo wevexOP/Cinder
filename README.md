@@ -4,7 +4,7 @@ Cinder is a new dating site made by developers, for developers!
 
 Get to know other like minded individuals who love to code just as much as you do!
 
-Cinder offers multiple chat rooms that are catered to your favorite coding languag! You can connect with others that spark your interest by linking ways to contact you on your profile!
+Cinder offers multiple chat rooms that are catered to your favorite coding language! You can connect with others that spark your interest by linking ways to contact you on your profile!
 
 Meet your future love interest on Cinder! 
 ...or maybe even your future business partner? 
