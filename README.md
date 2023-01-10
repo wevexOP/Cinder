@@ -16,11 +16,27 @@ After you have completed our signup process, head to your profile to customize y
 
 Once you've completed that, head to the chat rooms! You'll be prompted with choosing a username and which coding language chatroom you'd like to join. Get in there and find your spark!
 
-## Sources
--
--
--
--
+## UX/UI
+<img width="1512" alt="Screenshot 2023-01-09 at 6 11 17 PM" src="https://user-images.githubusercontent.com/112153725/211446651-d960d077-5874-4848-8692-83a04152df8d.png">
+<img width="1512" alt="Screenshot 2023-01-09 at 6 11 33 PM" src="https://user-images.githubusercontent.com/112153725/211446658-4f5463b5-2376-42b2-a3bb-173e2d2c3764.png">
+
+## Sources (Dependencies)
+
+- bcrypt
+- body-parser
+- bootstrap
+- dotenv
+- express
+- express-handlebars
+- jsonwebtoken
+- mysql2
+- node
+- nodemon
+- npm
+- sequelize
+- server
+- socket.io
+- socketio
 
 ## Meet the Team
 
@@ -36,10 +52,8 @@ https://github.com/kait-kat
 Michael (studiomav) 
 https://github.com/studiomav
 
-Paul York (pyork3) 
-https://github.com/pyork3
-
 ArvinJames Inanoria (jxmesin)
 https://github.com/jxmesin
+
 
 

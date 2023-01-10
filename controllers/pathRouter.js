@@ -56,7 +56,7 @@ router.get('/profile', (req, res) => {
 
 });
 
-/* router.post('/profile', async (req, res) => {
+ router.post('/profile', async (req, res) => {
     console.log(req.body);
     const { fullNameProfile, userEmailProfile, userPhoneProfile, userLocationProfile } = req.body;
     userObject2 = await profile.create({
@@ -66,7 +66,7 @@ router.get('/profile', (req, res) => {
         userLocationProfile: userLocationProfile,
         })
     
-}); */
+});
 
 router.get('/profile/:id', (req, res) => {
     var id = req.params.id;
@@ -85,7 +85,7 @@ router.get('/chat', (req, res) =>
     res.render('chat');
 });
 
-router.get('/index', (req, res) =>
+router.get('/chat:id', (req, res) =>
 {
     var id = req.params.id;
 
@@ -98,7 +98,7 @@ router.get('/index', (req, res) =>
 
     else if (id == 'main')
     {
-        res.render('chatmain');
+        res.render('chatmain');5
     }
     
     else
