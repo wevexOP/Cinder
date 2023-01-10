@@ -4,7 +4,12 @@ const express = require('express');
 //const mysql = require('mysql2');
 const socketio = require('socket.io');
 const formatMessage = require('./utils/messages');
+
 const { userJoin, getCurrentUser, userLeave, getRoomUsers} = require('./utils/user');
+
+
+const { userJoin, getCurrentUser} = require('./utils/user');
+const mainRouter = require('./controllers');
 
 
 
@@ -12,15 +17,27 @@ const app = express();
 const server = http.createServer(app);
 const io = socketio(server);
 // Set static folder
+
 app.use(express.static(path.join(__dirname, "public")));
 
 /*let con = mysql.createConnection({
+
+app.use(express.static(path.join(__dirname, 'public')));
+app.use(mainRouter);
+
+/* let con = mysql.createConnection({
+
     host: "localhost",
     user: "",
     password: "",
     database: "devlove"
+
   });*/
   
+
+  });
+  */
+
 
 const adminName = 'Cinder Bot';
 
@@ -72,8 +89,12 @@ if (user) {
 
 });
 });
+
 //app.listen(process.env.PORT || 4001);
 const PORT = 4001 || process.env.PORT;
+
+const PORT = process.env.PORT || 4001;
+
 
 server.listen(PORT, () => console.log(`Server running on ${PORT}`));
 

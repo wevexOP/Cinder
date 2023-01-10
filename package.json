@@ -1,4 +1,8 @@
 {
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npm start --prefix server"
+  },
   "dependencies": {
     "bcrypt": "^5.1.0",
     "body-parser": "^1.20.1",
@@ -8,7 +12,9 @@
     "express-handlebars": "^6.0.6",
     "jsonwebtoken": "^9.0.0",
     "mysql2": "^2.3.3",
+    "node": "^19.3.0",
     "nodemon": "^2.0.20",
+    "npm": "^9.2.0",
     "sequelize": "^6.28.0",
     "server": "^1.0.38",
     "socket.io": "^4.5.4",
