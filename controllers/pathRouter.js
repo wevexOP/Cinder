@@ -5,7 +5,6 @@ const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
 const templates = {}
 
-
 router.get('/', (req, res) => {
     res.render('home');
 });
@@ -56,17 +55,17 @@ router.get('/profile', (req, res) => {
 
 });
 
-/* router.post('/profile', async (req, res) => {
+ router.post('/profile', async (req, res) => {
     console.log(req.body);
-    const { fullNameProfile, userEmailProfile, userPhoneProfile, userLocationProfile } = req.body;
-    userObject2 = await profile.create({
-        fullNameProfile: fullNameProfile,
-        userEmailProfile: userEmailProfile,
-        userPhoneProfile: userPhoneProfile,
-        userLocationProfile: userLocationProfile,
-        })
-    
-}); */
+    res.end();
+    // const { fullNameProfile, userEmailProfile, userPhoneProfile, userLocationProfile } = req.body;
+    // userObject2 = await profile.create({
+    //     fullNameProfile: fullNameProfile,
+    //     userEmailProfile: userEmailProfile,
+    //     userPhoneProfile: userPhoneProfile,
+    //     userLocationProfile: userLocationProfile,
+    //     })
+});
 
 router.get('/profile/:id', (req, res) => {
     var id = req.params.id;

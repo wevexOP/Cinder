@@ -6,7 +6,7 @@ class Profile extends Model {}
 Profile.init(
     {
         
-        fullName:{
+        userFullName:{
             type:DataTypes.STRING,
             allowNull:false,
         },
@@ -18,10 +18,14 @@ Profile.init(
             type:DataTypes.STRING,
             allowNull:false,
         },
-        userPhone:{
+        userOccupation:{
             type:DataTypes.STRING,
-            allowNull:false,
+            allowNull:true,
         },
+        userLocation:{
+            type:DataTypes.STRING,
+            allowNull:true,
+        }
     },
     {
         sequelize,
