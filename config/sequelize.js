@@ -1,6 +1,8 @@
 const { Sequelize } = require('sequelize');
-
-const sequelize = new Sequelize(
+let sequelize; 
+if(process.env.CLEARDB_DATABASE_URL){
+    sequelize = new Sequelize (process.env.CLEARDB_DATABASE_URL)
+} else { sequelize = new Sequelize(
     process.env.DB_NAME, 
     process.env.DB_USER,
     process.env.DB_PASSWORD,
@@ -8,6 +10,9 @@ const sequelize = new Sequelize(
     host: process.env.DB_HOST,
     dialect: 'mysql',
 });
+
+}
+
 
 /* const sequelize2 = new Sequelize(
     process.env.DB_NAME2, 
