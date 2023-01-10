@@ -36,9 +36,6 @@ https://github.com/kait-kat
 Michael (studiomav) 
 https://github.com/studiomav
 
-Paul York (pyork3) 
-https://github.com/pyork3
-
 ArvinJames Inanoria (jxmesin)
 https://github.com/jxmesin
 
