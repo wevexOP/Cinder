@@ -16,11 +16,23 @@ After you have completed our signup process, head to your profile to customize y
 
 Once you've completed that, head to the chat rooms! You'll be prompted with choosing a username and which coding language chatroom you'd like to join. Get in there and find your spark!
 
-## Sources
--
--
--
--
+## Sources (Dependencies)
+
+- bcrypt
+- body-parser
+- bootstrap
+- dotenv
+- express
+- express-handlebars
+- jsonwebtoken
+- mysql2
+- node
+- nodemon
+- npm
+- sequelize
+- server
+- socket.io
+- socketio
 
 ## Meet the Team
 
