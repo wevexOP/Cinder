@@ -1,4 +1,6 @@
 # Cinder: Dating site by developers, for developers
+
+https://dev-loveio.herokuapp.com/ 
 ## What is Cinder? :fire:
 Cinder is a new dating site made by developers, for developers! 
 
@@ -15,6 +17,10 @@ Once loaded, you'll be greeted by the homepage. There will be two buttons on the
 After you have completed our signup process, head to your profile to customize your information. Include eveything that you'd like other users to see, don't be shy! We highly suggest adding your GitHub link so that other users can see what you've been cooking up in the office...
 
 Once you've completed that, head to the chat rooms! You'll be prompted with choosing a username and which coding language chatroom you'd like to join. Get in there and find your spark!
+
+## UX/UI
+<img width="1512" alt="Screenshot 2023-01-09 at 6 11 17 PM" src="https://user-images.githubusercontent.com/112153725/211446651-d960d077-5874-4848-8692-83a04152df8d.png">
+<img width="1512" alt="Screenshot 2023-01-09 at 6 11 33 PM" src="https://user-images.githubusercontent.com/112153725/211446658-4f5463b5-2376-42b2-a3bb-173e2d2c3764.png">
 
 ## Sources (Dependencies)
 

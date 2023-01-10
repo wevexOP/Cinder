@@ -1,7 +1,7 @@
 {
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npm start --prefix server"
+    "start": "node server.js"
   },
   "dependencies": {
     "bcrypt": "^5.1.0",
