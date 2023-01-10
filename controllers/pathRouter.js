@@ -82,30 +82,9 @@ router.get('/profile/:id', (req, res) => {
 
 router.get('/chat', (req, res) =>
 {
-    res.render('chat');
+    res.redirect('http://localhost:3002');
 });
 
-router.get('/chat:id', (req, res) =>
-{
-    var id = req.params.id;
-
-    console.log(id);
-
-    if (id == 'landing')
-    {
-        res.render('chat');
-    }
-
-    else if (id == 'main')
-    {
-        res.render('chatmain');5
-    }
-    
-    else
-    {
-        res.render('home');
-    }
-});
 
 router.get('/about', (req, res) => {
     res.render('about');
