@@ -8,9 +8,6 @@ const formatMessage = require('./utils/messages');
 const { userJoin, getCurrentUser, userLeave, getRoomUsers} = require('./utils/user');
 
 
-const { userJoin, getCurrentUser} = require('./utils/user');
-const mainRouter = require('./controllers');
-
 
 
 const app = express();
@@ -34,9 +31,6 @@ app.use(mainRouter);
 
   });*/
   
-
-  });
-  */
 
 
 const adminName = 'Cinder Bot';
@@ -91,9 +85,9 @@ if (user) {
 });
 
 //app.listen(process.env.PORT || 4001);
-const PORT = 4001 || process.env.PORT;
 
-const PORT = process.env.PORT || 4001;
+
+const PORT =  3002;
 
 
 server.listen(PORT, () => console.log(`Server running on ${PORT}`));
