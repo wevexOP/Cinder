@@ -1,7 +1,9 @@
 const router = require('express').Router();
 const { user } = require('../models');
+const { profile } = require('../models');
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
+const templates = {}
 
 
 router.get('/', (req, res) => {
@@ -54,6 +56,18 @@ router.get('/profile', (req, res) => {
 
 });
 
+ router.post('/profile', async (req, res) => {
+    console.log(req.body);
+    const { fullNameProfile, userEmailProfile, userPhoneProfile, userLocationProfile } = req.body;
+    userObject2 = await profile.create({
+        fullNameProfile: fullNameProfile,
+        userEmailProfile: userEmailProfile,
+        userPhoneProfile: userPhoneProfile,
+        userLocationProfile: userLocationProfile,
+        })
+    
+});
+
 router.get('/profile/:id', (req, res) => {
     var id = req.params.id;
 
@@ -71,7 +85,7 @@ router.get('/chat', (req, res) =>
     res.render('chat');
 });
 
-router.get('/chat/:id', (req, res) =>
+router.get('/chat:id', (req, res) =>
 {
     var id = req.params.id;
 
@@ -84,7 +98,7 @@ router.get('/chat/:id', (req, res) =>
 
     else if (id == 'main')
     {
-        res.render('chatmain');
+        res.render('chatmain');5
     }
     
     else
